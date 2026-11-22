@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Battleship | Odin Project</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <p class="eyebrow">THE ODIN PROJECT · JAVASCRIPT</p>
+      <h1>BATTLESHIP</h1>
+      <p class="subtitle">Deploy your fleet. Find the enemy. Rule the seas.</p>
+    </header>
+    <section class="toolbar" aria-label="Game controls">
+      <div id="placement-controls">
+        <button id="rotate" type="button">Orientation: Horizontal</button>
+        <button id="random" type="button">Random Fleet</button>
+      </div>
+      <button id="restart" type="button">New Game</button>
+    </section>
+    <p id="status" role="status" aria-live="polite"></p>
+    <section class="boards">
+      <div class="board-panel">
+        <h2>YOUR FLEET</h2>
+        <p>Ships appear in blue · Hits in red</p>
+        <div id="player-board" class="board" aria-label="Your board"></div>
+      </div>
+      <div class="board-panel">
+        <h2>ENEMY WATERS</h2>
+        <p>Click to attack · Misses marked with dots</p>
+        <div id="enemy-board" class="board" aria-label="Enemy board"></div>
+      </div>
+    </section>
+    <footer>Fleet sizes: 5 · 4 · 3 · 3 · 2 | 10 × 10 grid</footer>
+  </main>
+  <script type="module" src="./src/dom.js"></script>
+</body>
+</html>
