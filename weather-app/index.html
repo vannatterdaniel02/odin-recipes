@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101c2b" />
+  <title>Hollow Creek Weather | Forecast</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="shell">
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="Hollow Creek Weather home"><span class="brand-mark" aria-hidden="true">◈</span><span>HOLLOW CREEK <strong>WEATHER</strong></span></a>
+      <span class="header-label">THE OUTDOOR FORECAST</span>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <p class="eyebrow">KNOW BEFORE YOU GO</p>
+        <h1 id="hero-title">Weather for your<br /><em>next adventure.</em></h1>
+        <p class="intro">Current conditions and the days ahead, wherever the trail takes you.</p>
+        <form id="search-form" class="search-form" role="search">
+          <label class="sr-only" for="location-input">City, state, or ZIP code</label>
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input id="location-input" name="location" type="search" placeholder="Search city, state, or ZIP code" autocomplete="off" required minlength="2" value="Charleston, WV" />
+          <button type="submit" id="search-button">Get forecast <span aria-hidden="true">↗</span></button>
+        </form>
+        <div class="search-footer"><span>Try: Denver, CO · London · 25601</span><div class="unit-toggle" role="group" aria-label="Temperature units"><button type="button" id="fahrenheit-button" class="active" aria-pressed="true">°F</button><button type="button" id="celsius-button" aria-pressed="false">°C</button></div></div>
+      </section>
+
+      <p id="status" class="status" role="status" aria-live="polite">Enter a location to load the forecast.</p>
+
+      <section id="weather-results" class="results" aria-label="Weather results" hidden>
+        <div class="current-card">
+          <div class="current-main">
+            <div><p class="eyebrow light">CURRENT CONDITIONS</p><h2 id="place-name">—</h2><p id="updated-time" class="muted">—</p></div>
+            <div class="weather-icon" id="current-icon" aria-hidden="true">☀</div>
+          </div>
+          <div class="temperature-row"><span id="current-temperature" class="big-temp">—</span><div class="conditions"><strong id="current-description">—</strong><span id="feels-like">Feels like —</span></div></div>
+          <div class="stats-grid">
+            <div class="stat"><span>HUMIDITY</span><strong id="humidity">—</strong></div>
+            <div class="stat"><span>WIND</span><strong id="wind">—</strong></div>
+            <div class="stat"><span>PRECIPITATION</span><strong id="precipitation">—</strong></div>
+            <div class="stat"><span>UV INDEX</span><strong id="uv-index">—</strong></div>
+          </div>
+        </div>
+        <section class="forecast-section" aria-labelledby="forecast-heading"><div class="section-heading"><div><p class="eyebrow">PLAN AHEAD</p><h2 id="forecast-heading">5-day forecast</h2></div><span class="forecast-subtitle">Daily highs and lows</span></div><div id="forecast-grid" class="forecast-grid"></div></section>
+      </section>
+    </main>
+
+    <footer class="site-footer"><span>HOLLOW CREEK WEATHER · BUILT FOR THE OUTDOORS</span><span>Weather data provided by <a href="https://www.visualcrossing.com/" target="_blank" rel="noopener noreferrer">Visual Crossing Weather</a></span></footer>
+  </div>
+</body>
+</html>
